@@ -17,7 +17,7 @@ const PathfindingVisualizer = () => {
     useEffect(() => {
         const box = getInitialGrid();
         setGrid(box);
-    },[grid])
+    },[])
 
     const handleMouseDown = (row, col) => {
         const newGrid = getNewGridWithWallToggled(grid, row, col);

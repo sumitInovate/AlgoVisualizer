@@ -27,27 +27,27 @@
 @keyframes visitedAnimation {
   0% {
     transform: scale(0.3);
-    background-color: rgba(0, 0, 66, 0.75);
+    background-color: #7C83FD;
     border-radius: 100%;
   }
 
   50% {
-    background-color: rgba(17, 104, 217, 0.75);
+    background-color: #96BAFF;
   }
 
   75% {
     transform: scale(1.2);
-    background-color: rgba(0, 217, 159, 0.75);
+    background-color: #7DEDFF;
   }
 
   100% {
     transform: scale(1);
-    background-color: rgba(0, 190, 218, 0.75);
+    background-color: #88FFF7;
   }
 }
 
 .node-wall {
-  background-color: rgb(12, 53, 71);
+  background-color: #753422;
 }
 
 .node-shortest-path {

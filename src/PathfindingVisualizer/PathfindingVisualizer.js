@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import Node from './Node/Node';
-import {dijkstra, getNodesInShortestPathOrder} from '../Algorithms/dijkstras';
 import './PathfindingVisualizer.css';
+import Controller from './Controller/Controller';
 
 const START_NODE_ROW = 10;
 const START_NODE_COL = 15;
@@ -35,40 +35,7 @@ const PathfindingVisualizer = () => {
         setMouseIsPressed(false);
     }
 
-    const animateDijkstra = (visitedNodesInOrder, nodesInShortestPathOrder) => {
-        for(let i=0; i<=visitedNodesInOrder.length; i++){
-            if(i===visitedNodesInOrder.length){
-                setTimeout(() => {
-                    animateShortestPath(nodesInShortestPathOrder);
-                }, 10*i);
-                return;
-            }
-            setTimeout(() => {
-                const node = visitedNodesInOrder[i];
-                document.getElementById(`node-${node.row}-${node.col}`).className = 'node node-visited';
-            }, 10*i);
-        }
-    }
-
-    const animateShortestPath = (nodesInShortestPathOrder) =>{
-        for (let i = 0; i < nodesInShortestPathOrder.length; i++) {
-            setTimeout(() => {
-              const node = nodesInShortestPathOrder[i];
-              document.getElementById(`node-${node.row}-${node.col}`).className =
-                'node node-shortest-path';
-            }, 50 * i);
-          }
-    }
-
-    const visualizeDijkstra = () => {
-        const startNode = grid[START_NODE_ROW][START_NODE_COL];
-        const finishNode = grid[FINISH_NODE_ROW][FINISH_NODE_COL];
-        const visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
-        const nodesInShortestPathOrder = getNodesInShortestPathOrder(finishNode);
-        animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder);
-    }
-
-
+    
     return (
         <>
         <div className="grid">
@@ -95,12 +62,12 @@ const PathfindingVisualizer = () => {
                 );
             })}
         </div>
-        <div className="algoName">
-            Dijkstra's Algorithm
-        </div>
-        <button className="start" onClick={() => visualizeDijkstra()}>
-            START
-        </button>
+        <Controller 
+        grid={grid}
+        startNodeRow={START_NODE_ROW}
+        startNodeCol={START_NODE_COL}
+        finishNodeRow={FINISH_NODE_ROW}
+        finishNodeCol={FINISH_NODE_COL}></Controller>
         </>
     ); 
 }

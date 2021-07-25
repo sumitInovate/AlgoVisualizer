@@ -4,8 +4,7 @@
     border-radius: 10px;
 }
 
-.start{
-    float: right;
+.btn{
     border: none;
     width: 95px;
     height: 45px;
@@ -15,9 +14,7 @@
     font-family: 'Prompt', sans-serif;
 }
 
-.algoName{
-    float: left;
-    padding: 15px;
-    background-color: #E8F0F2;
-    border-radius: 10px;
+p{
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
 }

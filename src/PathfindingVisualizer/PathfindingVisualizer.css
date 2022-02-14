@@ -12,6 +12,7 @@
     background: #F48B29;
     border-radius: 10px;
     font-family: 'Prompt', sans-serif;
+    box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, .5);
 }
 
 p{

@@ -5,11 +5,35 @@
     justify-content: space-between;
 }
 
+
 .menu{
     margin: auto 0;
+    flex: 0.6;
 }
 
-.menuline__1{
+@keyframes animate {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
+.navbar{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s;
+}
+
+.navbar a p:hover{
+    border-bottom: 3px solid #F48B29;
+    animation: animate .5s;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+
+
+/* .menuline__1{
     width: 45px;
     height: 4px;
     background-color: #000;
@@ -24,4 +48,4 @@
     margin: 4px 0;
     float: right;
     border-radius: 2px;
-}
+} */

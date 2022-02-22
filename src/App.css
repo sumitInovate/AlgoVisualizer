@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
 
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
 .App {
   text-align: center;
   margin: auto;

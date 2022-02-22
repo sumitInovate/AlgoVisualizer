@@ -83,7 +83,7 @@ const Controller = ({ grid, startNodeRow, startNodeCol, finishNodeRow, finishNod
                 <p>{slide}%</p>
             </div>
             <button className="btn" onClick={() => visualizeDijkstra()}>START</button>
-            <button className="btn" onClick={() => window.location.reload(false)}>RESTART</button>
+            <button className="btn" onClick={() => window.location.reload(false)}>RESET</button>
         </div>
     )
 }

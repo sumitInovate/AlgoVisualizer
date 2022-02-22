@@ -1,0 +1,12 @@
+.array__container{
+    margin: 20px 0;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+.array__bar{
+    width: 2px;
+    background-color: #F48B29;
+    display: inline-block;
+    margin: 0 1px;
+}

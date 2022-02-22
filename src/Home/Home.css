@@ -4,11 +4,17 @@
 
 .pathfinding__container{
     padding: 20px;
-    border: 5px solid #000;
+    border: 4px solid #000;
     border-radius: 10px;
     display: flex;
     text-align: left;
     justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.pathfinding__container:hover{
+    background-color: #f2f3f4;
+    cursor: pointer;
 }
 
 .algo__info{

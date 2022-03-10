@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PathfindingVisualizer from './PathfindingVisualizer/PathfindingVisualizer';
 import SortingVisualizer from './SortingVisualizer/SortingVisualizer';
+import BacktrackingVisualizer from './BacktrackingVisualizer/BacktrackingVisualizer';
 import Tab from './Tab/Tab';
 import Home from './Home/Home';
 import Theory from './Theory/Theory';
@@ -19,6 +20,7 @@ function App() {
           <Route path='/forum' element={<Forum />} />
           <Route path='/path-visual' element={<PathfindingVisualizer />} />
           <Route path='/sort-visual' element={<SortingVisualizer />} />
+          <Route path='/backtrack-visual' element={<BacktrackingVisualizer />} />
         </Routes>
       </BrowserRouter>
     </div>

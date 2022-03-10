@@ -1,0 +1,18 @@
+.backtrack__container{
+    margin: 20px auto;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+.field{
+    width: 1rem;
+    height: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+    color: #000;
+}
+
+.field[readonly]{
+    background-color: #222;
+    color: #fff;
+}

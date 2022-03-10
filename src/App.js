@@ -8,6 +8,7 @@ import Tab from './Tab/Tab';
 import Home from './Home/Home';
 import Theory from './Theory/Theory';
 import Forum from './Forum/Forum';
+import DynamicProgramVisualizer from './DynamicProgramVisualizer/DynamicProgramVisualizer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/path-visual' element={<PathfindingVisualizer />} />
           <Route path='/sort-visual' element={<SortingVisualizer />} />
           <Route path='/backtrack-visual' element={<BacktrackingVisualizer />} />
+          <Route path='/dynamic-visual' element={<DynamicProgramVisualizer />} />
         </Routes>
       </BrowserRouter>
     </div>

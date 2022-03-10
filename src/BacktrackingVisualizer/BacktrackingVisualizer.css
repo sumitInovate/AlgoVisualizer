@@ -12,7 +12,10 @@
     color: #000;
 }
 
-.field[readonly]{
-    background-color: #222;
-    color: #fff;
-}
+.sudoku-grid {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    grid-template: repeat(9, 1fr) / repeat(9, 1fr);
+  }

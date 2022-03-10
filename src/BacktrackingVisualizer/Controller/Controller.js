@@ -5,7 +5,7 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 
 
-const Controller = ({getSudoku, getQueen, getPath}) => {
+const Controller = ({getSudoku, getQueen, getPath, speed}) => {
 
     const [slide, setSlide] = useState(100);
     const [isActive, setIsActive] = useState(false);
@@ -14,7 +14,8 @@ const Controller = ({getSudoku, getQueen, getPath}) => {
 
 
     const handleSlide = (event) => {
-        return setSlide(event.target.value);
+        setSlide(event.target.value);
+        speed(slide);
     }
 
     const options = ["Sudoku", "N-Queens", "Rat in a Maze"];

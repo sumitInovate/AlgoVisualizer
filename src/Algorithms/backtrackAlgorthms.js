@@ -1,101 +1,68 @@
+export const EMPTY_GRID = () =>
+  new Array(9).fill(null).map(() => new Array(9).fill(0));
+export const EMPTY_START_GRID = () =>
+  new Array(9).fill(null).map(() => new Array(9));
 
-// Sudoku DataStructure to Matrix conversion
-export const sudokuMatrix = (board) => {
-  const result = [];
-  for (let i = 0; i < 9; i++) {
-    for (let j = 0; j < 9; j++) {
-      result.push(board.rows[i].cols[j].value);
-    }
-  }
-  return result;
-}
+class SudokuService {
+  solvingProcess = [];
 
-// Check if input is Safe
-export const isSafe = (board, row, col, num) => {
-  // Row has the unique number row-clash
-  for (let d = 0; d < board.length; d++) {
-    // Check if number we are trying to push
-    // is already present in that row, return false
-    if (board[row][d] == num) {
-      return false;
-    }
-  }
 
-  // Column has the unique number
-  for (let r = 0; r < board.length; r++) {
-    // Check if number we are trying to push
-    // is already present in that column, return false
-    if (board[r][col] == num) {
-      return false;
-    }
-  }
-
-  // Corresponding Square has
-  // Unique number (Box-clash)
-  let sqrt = Math.floor(Math.sqrt(board.length));
-  let boxRowStart = row - row % sqrt;
-  let boxColStart = col - col % sqrt;
-
-  for (let r = boxRowStart; r < boxRowStart + sqrt; r++) {
-    for (let d = boxColStart; d < boxColStart + sqrt; d++) {
-      if (board[r][d] == num) {
-        return false;
+  findEmpty(grid) {
+    for (let i = 0; i < grid.length; i++) {
+      for (let j = 0; j < grid[i].length; j++) {
+        if (grid[i][j] === 0) return { i, j };
       }
     }
+    return false;
   }
 
-  // if there is no clash, its Safe
-  return true;
-}
+  isSafe(grid, row, col, num) {
+    for (let i = 0; i < grid.length; i++) {
+      if (grid[i][col] === num && i !== row) return false;
+      if (grid[row][i] === num && i !== col) return false;
+    }
 
-  const solvingProcess = [];
+    const x = Math.floor(row / 3) * 3;
+    const y = Math.floor(col / 3) * 3;
 
-// Solve Sudoku
-export const solveSudokuBoard = (board, n) => {
-  solvingProcess.push(board.map((arr) => arr.slice()));
-  let row = -1;
-  let col = -1;
-  let isEmpty = true;
-
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n; j++) {
-      if (board[i][j]) {
-        row = i;
-        col = j;
-
-        isEmpty = false;
-        break;
+    for (let i = x; i < x + 3; i++) {
+      for (let j = y; j < y + 3; j++) {
+        if (grid[i][j] === num && i !== row && j !== col) return false;
       }
     }
-    if (!isEmpty) {
-      break;
-    }
-  }
 
-  // No empty Space left
-  if (isEmpty) {
     return true;
   }
 
-  // Else for each row Backtrack
-  for (let num = 1; num <= n; n++) {
-    if (isSafe(board, row, col, num)) {
-      board[row][col] = num;
-      if (solveSudokuBoard(board, n)) {
-        // print(board, n)
-        return true;
+  solveRecursive(grid) {
+    this.solvingProcess.push(grid.map((arr) => arr.slice()));
+    const find = this.findEmpty(grid);
+    let position;
+    const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    if (find) {
+      position = find;
+    } else return true;
+
+    while (nums.length !== 0) {
+      const num = nums[0];
+
+      if (this.isSafe(grid, position.i, position.j, num)) {
+        grid[position.i][position.j] = Number(num);
+        if (this.solveRecursive(grid)) return true;
+        grid[position.i][position.j] = 0;
       }
-      else {
-        // Replace it
-        board[row][col] = 0;
-      }
+      nums.shift();
     }
+
+    return false;
   }
-  return false;
+
+  solve(grid) {
+    this.solvingProcess = [];
+    this.solveRecursive(grid);
+    return this.solvingProcess;
+  }
 }
 
-export const solve = (board) => {
-  this.solvingProcess = [];
-  solveSudokuBoard(board, 9);
-  return solvingProcess;
-}
+export default new SudokuService();

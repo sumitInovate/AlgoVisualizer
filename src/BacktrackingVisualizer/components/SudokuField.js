@@ -1,18 +1,15 @@
 import React from 'react'
+import '../BacktrackingVisualizer.css'
 
-const SudokuField = ({ field }) => {
-
-  const handleChange = () => {
-
-  }
-
+const SudokuField = ({ id, value, style }) => {
 
   return (
-    <input 
-    className='field' 
-    value={field.value || ""} 
-    readOnly={field.readonly}
-    onChange={handleChange}
+    <input
+      className='field'
+      id={id}
+      type="text"
+      style={style}
+      value={value}
     ></input>
   )
 }

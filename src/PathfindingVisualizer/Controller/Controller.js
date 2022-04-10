@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { dijkstra, getNodesInShortestPathOrder } from '../../Algorithms/dijkstras';
+import { dijkstra, getNodesInShortestPathOrder } from '../../Algorithms/pathfindingAlgorithms';
 import './Controller.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'

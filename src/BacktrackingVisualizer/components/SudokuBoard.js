@@ -12,7 +12,7 @@ function Board({ startGrid, grid }) {
         fields.push(
           <Field
             style={
-              startGrid[i][j] === 0 ? { color: "red" } : { color: "black" }
+              startGrid[i][j] === 0 ? { color: "#F48B29" } : { color: "black" }
             }
             key={index}
             id={index}

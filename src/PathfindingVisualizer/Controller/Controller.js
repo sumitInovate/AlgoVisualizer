@@ -53,37 +53,44 @@ const Controller = ({ grid, startNodeRow, startNodeCol, finishNodeRow, finishNod
     const options = ["Dijkstra's Algorithm", "A* Algorithm", "BFS Algorithm", "DFS Algorithm", "Swarm Algorithm"];
 
     return (
-        <div className="controller__container">
-            <div className="dropdown">
-                <div className='dropdown__btn' onClick={(e) => setIsActive(!isActive)}>
-                    {selected}
-                    <FontAwesomeIcon className='toggle' icon={faAngleDown} />
-                    {/* <FontAwesomeIcon className='toggle' icon={faAngleUp} /> */}
-                </div>
-                {isActive && (
-                    <div className='dropdown__content'>
-                        {options.map((option) => (
-                            <div className='dropdown__item' onClick={(e) => {
-                                setSelected(option);
-                                setIsActive(false);
-                            }}>{option}</div>
-                        ))}
+        <div className='container-box'>
+            <div className="controller__container">
+                <div className="dropdown">
+                    <div className='dropdown__btn' onClick={(e) => setIsActive(!isActive)}>
+                        {selected}
+                        <FontAwesomeIcon className='toggle' icon={faAngleDown} />
+                        {/* <FontAwesomeIcon className='toggle' icon={faAngleUp} /> */}
                     </div>
-                )}
+                    {isActive && (
+                        <div className='dropdown__content'>
+                            {options.map((option) => (
+                                <div className='dropdown__item' onClick={(e) => {
+                                    setSelected(option);
+                                    setIsActive(false);
+                                }}>{option}</div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+                <div className="slider__container">
+                    <p>SPEED</p>
+                    <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        defaultValue="100"
+                        onChange={handleSlide}
+                        className="slider" />
+                    <p>{slide}%</p>
+                </div>
+                <button className="btn" onClick={() => visualizeDijkstra()}>START</button>
+                <button className="btn" onClick={() => window.location.reload(false)}>RESET</button>
             </div>
-            <div className="slider__container">
-                <p>SPEED</p>
-                <input
-                    type="range"
-                    min="1"
-                    max="100"
-                    defaultValue="100"
-                    onChange={handleSlide}
-                    className="slider" />
-                <p>{slide}%</p>
+            <div className='feature__container'>
+                <button className='compare'>Compare</button>
+                <button className='manual'>Manual</button>
+                <button className='code'>Get Code</button>
             </div>
-            <button className="btn" onClick={() => visualizeDijkstra()}>START</button>
-            <button className="btn" onClick={() => window.location.reload(false)}>RESET</button>
         </div>
     )
 }

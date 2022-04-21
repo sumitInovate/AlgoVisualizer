@@ -38,12 +38,14 @@ const Controller = ({ grid, startNodeRow, startNodeCol, finishNodeRow, finishNod
     }
 
     const visualizeDijkstra = () => {
+        // console.time('Execution time');
         const startNode = grid[startNodeRow][startNodeCol];
         const finishNode = grid[finishNodeRow][finishNodeCol];
         console.log(finishNode);
         const visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
         const nodesInShortestPathOrder = getNodesInShortestPathOrder(finishNode);
         animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder);
+        // console.timeEnd('Execution time');
     }
 
     const handleSlide = (event) => {
@@ -87,9 +89,9 @@ const Controller = ({ grid, startNodeRow, startNodeCol, finishNodeRow, finishNod
                 <button className="btn" onClick={() => window.location.reload(false)}>RESET</button>
             </div>
             <div className='feature__container'>
-                <button className='compare'>Compare</button>
-                <button className='manual'>Manual</button>
-                <button className='code'>Get Code</button>
+                <button className='compare feature-btn'>Compare</button>
+                <button className='manual feature-btn'>Manual</button>
+                <button className='code feature-btn'>Get Code</button>
             </div>
         </div>
     )

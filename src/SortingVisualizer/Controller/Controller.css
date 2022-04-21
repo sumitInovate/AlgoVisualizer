@@ -1,11 +1,14 @@
-.controller__container{
-    display: flex;
-    border: 2px solid #000;
-    border-radius: 10px;
-    height: auto;
-    justify-content: space-between;
-    padding: 30px;
-    font-family: 'Prompt', sans-serif;
+.container-box {
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+.controller__container {
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  padding: 30px;
+  font-family: 'Prompt', sans-serif;
 }
 
 .btn{

@@ -44,6 +44,7 @@ const SortingVisualizer = () => {
     }
 
     const mergeSort = () => {
+        // console.time("Execution time");
         const animations = getMergeSortAnimations(array);
         for (let i = 0; i < animations.length; i++) {
           const arrayBars = document.getElementsByClassName('array__bar');
@@ -65,6 +66,7 @@ const SortingVisualizer = () => {
             }, i * ANIMATION_SPEED_MS);
           }
         }
+        // console.timeEnd("Execution time");
       }
     
 

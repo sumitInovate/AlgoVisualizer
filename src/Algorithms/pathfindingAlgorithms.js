@@ -21,6 +21,10 @@ export function dijkstra(grid, startNode, finishNode) {
   }
 }
 
+export function aStar(){
+  
+}
+
 function sortNodesByDistance(unvisitedNodes) {
   unvisitedNodes.sort((nodeA, nodeB) => nodeA.distance - nodeB.distance);
 }

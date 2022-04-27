@@ -1,0 +1,25 @@
+.cardContainer{
+    width: 100%;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin: 50px 0px;
+    padding: 20px;
+    display: flex;
+}
+
+.cardFrame > .cardImage{
+    height: 250px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.content{
+    margin: 20px;
+    text-align: left;
+    justify-content: center;
+}
+
+.content > .news__title{
+    font-weight: bold;
+}

@@ -21,8 +21,8 @@ export function dijkstra(grid, startNode, finishNode) {
   }
 }
 
-export function aStar(){
-  
+export function aStar() {
+
 }
 
 function sortNodesByDistance(unvisitedNodes) {
@@ -39,7 +39,7 @@ function updateUnvisitedNeighbors(node, grid) {
 
 function getUnvisitedNeighbors(node, grid) {
   const neighbors = [];
-  const {col, row} = node;
+  const { col, row } = node;
   if (row > 0) neighbors.push(grid[row - 1][col]);
   if (row < grid.length - 1) neighbors.push(grid[row + 1][col]);
   if (col > 0) neighbors.push(grid[row][col - 1]);
@@ -68,3 +68,6 @@ export function getNodesInShortestPathOrder(finishNode) {
   }
   return nodesInShortestPathOrder;
 }
+
+
+

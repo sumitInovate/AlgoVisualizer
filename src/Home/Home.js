@@ -8,14 +8,14 @@ import Algorithms from "./AlgorithmInfo.json";
 const Home = () => {
 
   const Data = Algorithms.map((algo) => {
-    return(
+    return (
       <div className='pathfinding__container'>
         <div className='algo__info'>
           <h2 className='title'>{algo.title}</h2>
           <p>{algo.description} </p>
         </div>
         <div className='visualize'>
-          <Link to={algo.twoDlink}className='twoD external-btn'>
+          <Link to={algo.twoDlink} className='twoD external-btn'>
             <FontAwesomeIcon className='visualizer-link' icon={faExternalLink} />
             <p>Visualize</p>
           </Link>

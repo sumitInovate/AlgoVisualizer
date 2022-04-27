@@ -115,3 +115,8 @@ from learning, this platform offers a whole resource of every part of the algori
 top programming languages mostly used by the programmers. User data can be also visualized by this application, through which the user is actually modifying
 the problem statement. This method includes dynamic manipulation of the algorithm visualizer. The resultant values after visualization can be used by the user
 purposely.
+
+## Team
+- Sumit Thakur
+- Yash Pingale
+- Kalpesh Sawant

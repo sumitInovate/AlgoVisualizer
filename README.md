@@ -39,6 +39,7 @@ pace of execution).
 
 Current platform consists of following algorithm representation:
 ![image](https://user-images.githubusercontent.com/58629244/165550978-d161ccfc-a022-461b-bca8-5eed443dc39d.png)
+
 Considering different categories; lets understand each of them separately.
 
 ### Pathfinding:
@@ -46,42 +47,60 @@ A	path-finding categorized algorithm is a term typically utilized with graphs an
 among nodes, which might be initially designed for travel maps and now used in inner gadget to break map information.
 Computerized: Default mode in visualizer guides the user to understand the working for finding a path from source to the destination node with respect to 
 obstacles generated on the way.
+
 ![image](https://user-images.githubusercontent.com/58629244/165551240-fcabfafe-44bd-43d6-9c59-99636e66335a.png)
+
 Manual: Manual mode contains various checkpoints initialized by a user in-order to get shortest possible route covering all the nodes
+
 ![image](https://user-images.githubusercontent.com/58629244/165551287-8f51e352-3559-49f0-a9ae-49fd22688482.png)
+
 
 ### Sorting
 Data-sorting is an important task in this world, they need to be sorted as per generation, identification or other required sequence. However, sorting 
 algorithms has been implemented by software engineers so that the system could provide better results in the shortest possible time these data are in 
 terms of array queues, linked list or any other data-structure.
 Computerized: Default mode on this visualizer will help a user to observe a work using a variety of algorithms and randomly generated data.
+
 ![image](https://user-images.githubusercontent.com/58629244/165551413-5602e9a0-eabb-4a95-83d1-a500b8bee56e.png)
+
 Manual: Manual mode helps a user to see working by sorting their own input-data using any method available in the options.
+
 ![image](https://user-images.githubusercontent.com/58629244/165551454-cadc7768-0b86-49e4-8c01-318fb8cad77b.png)
+
 
 ### Backtracking
 The algorithms specifically built for solving the particular component. It determines the brute-force technique to answer a given problem-statement at almost
 every possible value for a component.
 Computerized: Default mode of a platform will automatically generate a problem inside which the component randomly visualizes every possible value updating
 to get the final answer.
+
 ![image](https://user-images.githubusercontent.com/58629244/165551617-74f37860-da06-443c-9f87-87dd90aa89a0.png)
+
 Manual: The user can customize a given component while creating their own problem-statement and the visualizer will solve it without changing the user value.
+
 ![image](https://user-images.githubusercontent.com/58629244/165551677-5698fbb9-5996-4a31-8404-ff56d64d5802.png)
+
 
 ### Dynamic Programming
 Introduced methods are the most optimal way to solve the problem-statement of an applied component. This method uses a previously generated solution to obtain
 a new solution and store it with some data-structure to reuse it in future.
 Computerized: Default mode generates its own problem-statement for a component specified by the user and also visualizes the storing and reusing the data
 generated.
+
 ![image](https://user-images.githubusercontent.com/58629244/165551847-ab0545ed-16db-4e8e-91a9-ced5110a4871.png)
+
 Manual: Users may add their own data to observe and understand the working of the most optimal solution for their problem statement.
+
 ![image](https://user-images.githubusercontent.com/58629244/165551893-1338cafe-affc-4bc1-8c8e-48db5240066e.png)
+
 
 Visualization of every algorithm with the manipulative speed answers all questions of the learner and interaction with their own data will spoon-feed the
 user requirements. Platform built with ReactJS will boost the performance of an execution of the code in a most effective manner. Anyone is welcome and 
 can be trusted by this platform as no authentication required while learning for good.
 Example of Minimalistic User Interface of Platform:
+
 ![image](https://user-images.githubusercontent.com/58629244/165552076-580f34a3-1ce0-44a5-aca4-b804147f4377.png)
+
 As occurred previously, Logic Based Visualizer contains Comparison between their algorithms for time complexity to get the real-time value of execution.
 As these algorithms are running on web, its also include network speed while running the algorithm.
 

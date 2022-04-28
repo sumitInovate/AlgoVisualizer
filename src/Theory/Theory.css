@@ -1,0 +1,49 @@
+.Links{
+    border: 2px solid #000;
+    border-radius: 10px;
+    display: flex;
+    padding: 20px;
+    margin: 50px 0px;
+}
+
+
+
+.Link_category > .image{
+    height: 250px;
+    width: auto;
+}
+
+.link__list{
+    margin: 0px 10px;
+    display: inline;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.link__list > a >.link{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.head_link{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all .2s;
+}
+
+
+.link__list > a > .link:hover , .head_link:hover{
+    background-color: #F48B29;
+    color: #fff;
+}
+

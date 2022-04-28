@@ -31,7 +31,7 @@ const Forum = () => {
         <div>{data.map((news, id) =>
           <div key={id} className="cardContainer">
             <div className='cardFrame'>
-              <img className='cardImage' src={news.urlToImage}></img>
+              <img className='cardImage' src={news.urlToImage} alt={news.author}></img>
               <h3 className='author'>{news.author}</h3>
             </div>
             

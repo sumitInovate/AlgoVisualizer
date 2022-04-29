@@ -3,7 +3,7 @@
         "title": "Path-Finding Algorithm",
         "description": "Pathfinding or pathing is the plotting, by a computer application, of the shortest route between two points. It is a more practical variant on solving mazes. Pathfinding is closely related to the shortest path problem, within graph theory, which examines how to identify the path that best meets some criteria (shortest, cheapest, fastest, etc) between two points in a large network. At its core, a pathfinding method searches a graph by starting at one vertex and exploring adjacent nodes until the destination node is reached, generally with the intent of finding the cheapest route.",
         "twoDlink": "/path-visual",
-        "threeDlink": "https://simmer.io/@SmaxInfinity/path-finding"
+        "threeDlink": "https://simmer.io/@SmaxInfinity/death-room"
     },
     {
         "title": "Sorting Algorithm",
@@ -15,7 +15,7 @@
         "title": "Backtracking Algorithm",
         "description": "Backtracking is a general algorithm for finding solutions to some computational problems, notably constraint satisfaction problems, that incrementally builds candidates to the solutions, and abandons a candidate ('backtracks') as soon as it determines that the candidate cannot possibly be completed to a valid solution. Backtracking can be applied only for problems which admit the concept of a 'partial candidate solution' and a relatively quick test of whether it can possibly be completed to a valid solution. It is useless, for example, for locating a given value in an unordered table. When it is applicable, however, backtracking is often much faster than brute-force enumeration of all complete candidates, since it can eliminate many candidates with a single test.",
         "twoDlink": "/backtrack-visual",
-        "threeDlink": "https://simmer.io/@SmaxInfinity/back-tracking"
+        "threeDlink": "https://simmer.io/@SmaxEternity/backtrack"
     },
     {
         "title": "Dynamic Programming",

@@ -118,5 +118,4 @@ purposely.
 
 ## Team
 - Sumit Thakur
-- Yash Pingale
-- Kalpesh Sawant
+

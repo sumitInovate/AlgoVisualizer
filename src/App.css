@@ -1,29 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
 
-*{
-  -ms-overflow-style: none;
+/* Global Reset & Font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Prompt', sans-serif;
+  -ms-overflow-style: none; /* Hide scrollbar for IE */
+  scrollbar-width: none;    /* Firefox */
 }
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome, Safari, Edge */
 }
 
+/* App Wrapper */
 .App {
-  text-align: center;
-  margin: auto;
-  width: 1000px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Reusable Typography */
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
+/* Anchor Styling */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+/* Optional: App Header if still used somewhere */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,8 +64,11 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Optional: Animated Logo */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
 }
 
 @keyframes App-logo-spin {
@@ -48,7 +80,19 @@
   }
 }
 
-a{
-  text-decoration: none;
-  color: inherit;
+/* Responsive Utility */
+@media (max-width: 768px) {
+  .App {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
 }
+
+

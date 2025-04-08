@@ -1,49 +1,109 @@
-.homepage__container{
-    margin: 50px 0px;
-}
-
-.pathfinding__container{
-    padding: 20px;
-    border: 3px solid #000;
-    border-radius: 10px;
-    display: flex;
-    text-align: left;
-    justify-content: space-between;
-    margin: 20px 0px;
-}
-
-.pathfinding__container:hover{
-    background-color: #f2f3f4;
-    cursor: pointer;
-}
-
-.algo__info{
-    flex: 0.8;
-}
-
-.visualize{
-    flex: 0.2;
-    margin: auto 20px;
+.homepage__container {
+    margin: 60px auto;
+    padding: 0 1rem;
+    max-width: 1100px;
+  }
+  
+  /* Card container for each algorithm */
+  .pathfinding__container {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 30px;
+  }
+  
+  .pathfinding__container:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-3px);
+  }
+  
+  /* Text content */
+  .algo__info {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.external-btn{
-    padding: 10px;
-    border: 2px solid #000;
-    width: 200px;
-    margin: 10px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+  }
+  
+  .algo__desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 1.2rem;
+  }
+  
+  /* Buttons row */
+  .visualize {
     display: flex;
-    border-radius: 30px;
-    transition: all 0.2s;
-}
-
-.external-btn:hover{
-  background: #F48B29;
-  color: #fff;
-}
-
-.visualizer-link, .game-icon{
-    margin: 5px 10px; 
-}
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+  }
+  
+  /* External buttons */
+  .external-btn,
+  .external-btn:hover,
+  .external-btn:visited,
+  .external-btn:focus {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    font-weight: 300;
+    font-size: 0.95rem;
+    background-color: transparent;
+    color: #000;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+  }
+  
+  .external-btn:hover {
+    background-color: #F48B29;
+    border-color: #F48B29;
+    color: #fff;
+  }
+  
+  .external-btn:hover span,
+  .external-btn:hover .visualizer-link,
+  .external-btn:hover .game-icon {
+    color: #fff;
+  }
+  
+  .external-btn span {
+    margin: 0;
+  }
+  
+  /* Icon styling */
+  .visualizer-link,
+  .game-icon {
+    font-size: 1rem;
+    color: inherit;
+  }
+  
+  /* Responsive design */
+  @media screen and (max-width: 768px) {
+    .pathfinding__container {
+      padding: 20px;
+    }
+  
+    .visualize {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .external-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
